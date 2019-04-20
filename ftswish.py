@@ -7,7 +7,7 @@ class FTSwish(nn.Module):
 
     def forward(self, x): 
         if x > 0:
-            x = (x*torch.sigmoid(x)) + threshold
+            x = (x*torch.sigmoid(x)) + self.threshold
         else:
             x = threshold
 
